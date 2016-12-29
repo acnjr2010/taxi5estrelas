@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require contact_me
+//= require freelancer
+//= require jqBootstrapValidation
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .

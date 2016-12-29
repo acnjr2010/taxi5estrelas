@@ -13,6 +13,7 @@ gem 'font-awesome-sass', '~> 4.7'
 gem 'pg'
 gem 'devise', '~> 4.2'
 gem 'paperclip', '~> 5.1'
+gem 'haml', '~> 4.0', '>= 4.0.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
