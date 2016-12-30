@@ -1,0 +1,51 @@
+<br><br>
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Entre em Contato</h2>
+        <hr class="star-primary">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <%= simple_form_for @contact do |f| %>
+        <!--<form name="sentMessage" id="contactForm" novalidate>-->
+          <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <%= f.input :name, label: 'Nome', placeholder: 'Nome', required: true %>
+              <!--<label>Nome</label>
+              <input type="text" class="form-control" placeholder="Nome" id="name" required data-validation-required-message="Por favor entre com seu nome.">-->
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <%= f.input :email, label: 'Email', placeholder: 'Email', required: true  %>
+              <!--<label>Email</label>
+              <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Por favor entre com seu email.">-->
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <%= f.input :phone, label: 'Telefone', placeholder: 'Telefone', required: true %>
+              <!--<label>Telefone</label>
+              <input type="tel" class="form-control" placeholder="Telefone" id="phone" required data-validation-required-message="Por favor entre com seu telefone.">-->
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <br>
+          <div id="success"></div>
+          <div class="row">
+            <div class="form-group col-xs-12">
+              <%= f.submit "Enviar", class: 'btn btn-success btn-lg pull-right' %>
+              <!--<button type="submit" class="btn btn-success btn-lg pull-right">Enviar</button>-->
+            </div>
+          </div>
+          <% end %>
+        <!--</form>-->
+      </div>
+    </div>
+  </div>
+</section>
