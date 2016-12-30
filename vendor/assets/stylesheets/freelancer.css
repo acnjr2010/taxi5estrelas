@@ -105,6 +105,13 @@ header .intro-text .skills {
   width: 200px;
   height: auto;
 }
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 35%;
+      height: 35%;
+      margin: auto;
+  }
 @media (min-width: 768px) {
   header .container {
     padding-top: 200px;
