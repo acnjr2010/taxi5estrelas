@@ -96,14 +96,28 @@ header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
 }
-.logo{
-  width: 200px;
-  height: 200px;
-}
 
 .app_android{
   width: 200px;
   height: auto;
+}
+
+.box {
+    margin-bottom: 20px;
+    padding: 30px 15px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+.img-border {
+    float: none;
+    margin: 0 auto 0;
+    border: #999999 solid 1px;
+}
+
+.img-left {
+    float: none;
+    margin: 0 auto 0;
 }
 
 .carousel-inner > .item > img,
@@ -127,6 +141,10 @@ header .intro-text .skills {
     width: 300px;
     height: 300px;
   }
+  .img-left {
+        float: left;
+        margin-right: 25px;
+    }
 
 }
 .navbar-custom {
@@ -528,4 +546,12 @@ fieldset[disabled] .btn-success.active {
 .portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
+}
+
+@media screen and (min-width:1200px) {
+    .box:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
 }
