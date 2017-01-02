@@ -1,11 +1,11 @@
 class WelcomeController < ApplicationController
   def index
   end
-  
+
   def create
   end
 
-  def aplicativo
+  def app
   end
 
   def promocao

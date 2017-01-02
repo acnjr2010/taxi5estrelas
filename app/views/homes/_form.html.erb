@@ -1,0 +1,6 @@
+<%= simple_form_for @home do |f| %>
+  <%= f.input :title, label: "Título", placeholder: "Titulo Principal abaixo do logo",required: true, autofocus: true %>
+  <%= f.input :texto, label: "Texto Principal", placeholder: "Texto que vem abaixo do logo",required: true, autofocus: true, input_html: { rows: 7 } %>
+  <%= f.input :avatar, label: "Logotipo", as: :file, class: 'btn-primary', required: true %>
+  <%= f.submit 'Salvar', class: 'btn btn-warning'%>
+<% end %>

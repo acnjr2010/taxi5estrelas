@@ -1,16 +1,24 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :welcome
   resources :messages
+  resources :homes
+  resources :aplicativos
+  resources :promocoes
+
   root "welcome#index"
 
-  get "/aplicativo", controller: 'welcome', action: 'aplicativo'
+  get "/app", controller: 'welcome', action: 'app'
   get "/promocao", controller: 'welcome', action: 'promocao'
   get "/contato", controller: 'messages', action: 'index'
   get "/admin", controller: 'users', action: 'index'
-  get "/home_admin", controller: 'users', action: 'home_admin'
-  get "/promocao_admin", controller: 'users', action: 'promocao_admin'
-  get "/aplicativo_admin", controller: 'users', action: 'aplicativo_admin'
-  get "/mensagens_admin", controller: 'users', action: 'mensagens_admin'
+  get "/home_admin", controller: 'homes', action: 'home_admin'
+  get "/promocao_admin", controller: 'promocoes', action: 'promocao_admin'
+  get "/aplicativo_admin", controller: 'aplicativos', action: 'aplicativo_admin'
+  get "/mensagens_admin", controller: 'messages', action: 'mensagens_admin'
+
+
+
 end

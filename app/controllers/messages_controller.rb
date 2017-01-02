@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+
   def index
     @contact = Message.new
   end

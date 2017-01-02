@@ -1,118 +1,121 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Taxi 5 Estrelas">
-    <meta name="author" content="Antonio Carlos Nogueira Junior">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Taxi 5 Estrelas">
+  <meta name="author" content="Antonio Carlos Nogueira Junior">
 
-    <title>Taxi 5 Estrelas</title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <title>Taxi 5 Estrelas</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag Ckeditor.cdn_url %>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<% if user_signed_in? %>
+<body>
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <% if user_signed_in? %>
-  <body>
+  <div id="wrapper">
 
-      <div id="wrapper">
-
-          <!-- Navigation -->
-          <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="index.html">Area Administrativa - Taxi 5 Estrelas</a>
-              </div>
-              <!-- Top Menu Items -->
-              <ul class="nav navbar-right top-nav">
-                  <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Taxi 5 Estrelas <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                          <li>
-                            <%= link_to edit_user_registration_path do %>
-                              <%= icon('user') %> Editar Dados
-                            <% end %>
-                          </li>
-                          <li class="divider"></li>
-                          <li>
-                            <%= link_to destroy_user_session_path, method: :delete do %>
-                              <i class="fa fa-fw fa-power-off"></i> Sair Admin
-                            <% end %>
-
-                          </li>
-                      </ul>
-                  </li>
-              </ul>
-              <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-              <div class="collapse navbar-collapse navbar-ex1-collapse">
-                  <ul class="nav navbar-nav side-nav">
-                      <li>
-                          <%= link_to admin_path do %>
-                          <i class="fa fa-fw fa-dashboard"></i> Dashboard
-                        <% end %>
-                      </li>
-                      <li>
-                        <%= link_to home_admin_path do %>
-                          <i class="fa fa-fw fa-home"></i> Home
-                        <% end %>
-                      </li>
-                      <li>
-                        <%= link_to aplicativo_admin_path do %>
-                          <i class="fa fa-fw fa-mobile"></i> Aplicativo
-                        <% end %>
-                      </li>
-                      <li>
-                        <%= link_to promocao_admin_path do %>
-                          <i class="fa fa-fw fa-dollar"></i> Promoção
-                        <% end %>
-                      </li>
-                      <li>
-                        <%= link_to mensagens_admin_path do %>
-                          <i class="fa fa-fw fa-comments"></i> Mensagens
-                        <% end %>
-                      </li>
-                  </ul>
-              </div>
-              <!-- /.navbar-collapse -->
-          </nav>
-
-          <div id="page-wrapper">
-
-              <div class="container-fluid">
-
-                  <!-- Page Heading -->
-                  <div class="row">
-                      <div class="col-lg-12">
-                          <h1 class="page-header">
-
-          <%= yield  %>
-
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Area Administrativa - Taxi 5 Estrelas</a>
       </div>
+      <!-- Top Menu Items -->
+      <ul class="nav navbar-right top-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Taxi 5 Estrelas <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to edit_user_registration_path do %>
+              <%= icon('user') %> Editar Dados
+              <% end %>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-fw fa-power-off"></i> Sair Admin
+              <% end %>
 
-  <% else %>
-  <body class="index">
-      <%= render 'welcome/menu' %>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav side-nav">
+          <li>
+            <%= link_to admin_path do %>
+            <i class="fa fa-fw fa-dashboard"></i> Dashboard
+            <% end %>
+          </li>
+          <li>
+            <%= link_to home_admin_path do %>
+            <i class="fa fa-fw fa-home"></i> Home
+            <% end %>
+          </li>
+          <li>
+            <%= link_to aplicativo_admin_path do %>
+            <i class="fa fa-fw fa-mobile"></i> Aplicativo
+            <% end %>
+          </li>
+          <li>
+            <%= link_to promocao_admin_path do %>
+            <i class="fa fa-fw fa-dollar"></i> Promoção
+            <% end %>
+          </li>
+          <li>
+            <%= link_to mensagens_admin_path do %>
+            <i class="fa fa-fw fa-comments"></i> Mensagens
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
 
-      <%= yield %>
+    <div id="page-wrapper">
 
-      <%= render 'welcome/footer' %>
-  <% end %>
-  </body>
+      <div class="container-fluid">
 
-</html>
+        <!-- Page Heading -->
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="page-header">
+
+              <p class="notice text-muted"><%= notice %></p>
+              <p class="alert text-muted"><%= alert %></p>
+
+              <%= yield  %>
+
+            </div>
+
+            <% else %>
+            <body class="index">
+              <%= render 'welcome/menu' %>
+
+              <%= yield %>
+
+              <%= render 'welcome/footer' %>
+              <% end %>
+            </body>
+
+            </html>
