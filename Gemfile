@@ -16,6 +16,8 @@ gem 'paperclip', '~> 5.1'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'rails-i18n', '~> 5.0.0.beta1'
+gem 'will_paginate', '~> 3.1'
+gem 'ckeditor', '~> 4.2', '>= 4.2.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
