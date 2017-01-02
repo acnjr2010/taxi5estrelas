@@ -1,0 +1,5 @@
+<%= simple_form_for @app do |f| %>
+  <%= f.input :app, label: "Texto Principal", placeholder: "Texto que vem ao lado da imagem", required: true, autofocus: true, input_html: { rows: 7 } %>
+  <%= f.input :avatar, label: "Imagem Lateral", as: :file, class: 'btn-primary', required: true %>
+  <%= f.submit 'Salvar', class: 'btn btn-warning'%>
+<% end %>
