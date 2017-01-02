@@ -32,22 +32,7 @@
                       <% end %>
 
                       <%= render "devise/shared/links" %>
-
-
-                  <!--
-                  <form role="form" action="" method="post" class="login-form">
-                    <div class="form-group">
-                      <label class="sr-only" for="form-username">Username</label>
-                        <input type="text" name="form-username" placeholder="Seu email..." class="form-username form-control" id="form-username">
-                      </div>
-                      <div class="form-group">
-                        <label class="sr-only" for="form-password">Password</label>
-                        <input type="password" name="form-password" placeholder="Senha..." class="form-password form-control" id="form-password">
-                      </div>
-                      <button type="submit" class="btn btn-success">Entrar</button>
-                  </form>
-                -->
-                </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,23 +40,3 @@
 
 </div>
 </section>
-
-<!--
-
-
-<h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
--->
