@@ -1,0 +1,77 @@
+<!-- Top content -->
+
+<section>
+<div class="top-content">
+
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 form-box">
+                  <div class="form-top">
+                    <div class="form-top-left">
+                      <h3>Acesso Administrativo</h3>
+                        <p>Entre com seu email e senha</p>
+                    </div>
+                    <div class="form-top-right">
+                      <i class="fa fa-lock"></i>
+                    </div>
+                    </div>
+                    <div class="form-bottom">
+                      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                        <div class="form-inputs">
+                          <%= f.input :email, autofocus: true, required: true %>
+                          <%= f.input :password, label: "Senha", autofocus: true, required: true %>
+                          <%= f.input :remember_me, label: "Lembrar-me", as: :boolean if devise_mapping.rememberable? %>
+                        </div>
+
+                        <div class="form-actions">
+                          <%= f.button :submit, class: "btn btn-success pull-right" do %>
+                            Logar <i class="fa fa-send"></i>
+                          <% end %>
+                        </div>
+                      <% end %>
+
+                      <%= render "devise/shared/links" %>
+
+
+                  <!--
+                  <form role="form" action="" method="post" class="login-form">
+                    <div class="form-group">
+                      <label class="sr-only" for="form-username">Username</label>
+                        <input type="text" name="form-username" placeholder="Seu email..." class="form-username form-control" id="form-username">
+                      </div>
+                      <div class="form-group">
+                        <label class="sr-only" for="form-password">Password</label>
+                        <input type="password" name="form-password" placeholder="Senha..." class="form-password form-control" id="form-password">
+                      </div>
+                      <button type="submit" class="btn btn-success">Entrar</button>
+                  </form>
+                -->
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!--
+
+
+<h2>Log in</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :email, required: false, autofocus: true %>
+    <%= f.input :password, required: false %>
+    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Log in" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+-->

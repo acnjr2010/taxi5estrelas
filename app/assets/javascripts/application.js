@@ -15,6 +15,9 @@
 //= require contact_me
 //= require freelancer
 //= require jqBootstrapValidation
+//= require jquery.backstretch
+//= require placeholder
+//= require scripts
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
