@@ -19,6 +19,9 @@ class MessagesController < ApplicationController
     end
   end
 
+  def mensagens_admin
+    @messages = Message.all.paginate(page: params[:page], per_page: 10).order('created_at DESC')
+  end
   private
 
   def messages_params

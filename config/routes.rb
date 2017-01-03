@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :messages
   resources :homes
   resources :aplicativos
-  resources :promocoes
+  resources :promocaos
 
   root "welcome#index"
 
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get "/contato", controller: 'messages', action: 'index'
   get "/admin", controller: 'users', action: 'index'
   get "/home_admin", controller: 'homes', action: 'home_admin'
-  get "/promocao_admin", controller: 'promocoes', action: 'promocao_admin'
+  get "/promocao_admin", controller: 'promocaos', action: 'promocao_admin'
   get "/aplicativo_admin", controller: 'aplicativos', action: 'aplicativo_admin'
   get "/mensagens_admin", controller: 'messages', action: 'mensagens_admin'
 
