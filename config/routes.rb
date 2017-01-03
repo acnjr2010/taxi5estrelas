@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   root "welcome#index"
 
   get "/app", controller: 'welcome', action: 'app'
-  get "/promocao", controller: 'welcome', action: 'promocao'
+  get "/promo", controller: 'welcome', action: 'promocao'
   get "/contato", controller: 'messages', action: 'index'
   get "/admin", controller: 'users', action: 'index'
   get "/home_admin", controller: 'homes', action: 'home_admin'
