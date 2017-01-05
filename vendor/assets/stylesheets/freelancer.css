@@ -203,6 +203,10 @@ header .intro-text .skills {
   text-align: justify;
   font-size: 1.25em;
 }
+.text-muted.icon{
+    text-align: center;
+    font-size: 1em;
+  }
 
 @media (min-width: 768px) {
   header .container {
@@ -233,6 +237,10 @@ header .intro-text .skills {
     text-align: justify;
     font-size: 1.75em;
   }
+  .text-muted.icon{
+      text-align: center;
+      font-size: 1.4em;
+    }
 }
 .navbar-custom {
   background: #191970;
