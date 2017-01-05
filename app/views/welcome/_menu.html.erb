@@ -1,35 +1,98 @@
 <!-- Navigation -->
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand" href="#page-top">Taxi 5 Estrelas</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="hidden">
-                    <a href="#page-top"></a>
-                </li>
-                <li class="page-scroll">
-                    <%= link_to "Home", welcome_index_path %>
-                </li>
-                <li class="page-scroll">
-                    <%= link_to "Aplicativo", app_path %>
-                </li>
-                <li class="page-scroll">
-                    <%= link_to "Promoção", promo_path %>
-                </li>
-                <li class="page-scroll">
-                    <%= link_to "Contato", contato_path %>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand" href="#page-top">Taxi 5 Estrelas</a>
     </div>
-    <!-- /.container-fluid -->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="page-scroll">
+          <%= link_to "Home", welcome_index_path %>
+        </li>
+        <li class="page-scroll">
+          <%= link_to "Aplicativo", app_path %>
+        </li>
+        <li class="page-scroll">
+          <%= link_to "Promoção", promo_path %>
+        </li>
+        <li class="page-scroll">
+          <%= link_to "Contato", contato_path %>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
 </nav>
+<% if current_page?(welcome_index_path) || current_page?(root_path) %>
+<div class="container_carrossel">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <%= image_tag("abertura_carrossel_home.jpg") %>
+      <div class="carousel-caption">
+        <h3>Aplicativo Taxi 5 Estrelas</h3>
+        <p>Baixe Agora Mesmo no Google Play ou no App Store.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag("cristo_maracana.jpg") %>
+      <div class="carousel-caption">
+        <h3>Agende sua corrida</h3>
+        <p>Marque o horário que deseja evitando atrasos.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag("bondinho.jpg") %>
+      <div class="carousel-caption">
+        <h3>Formas de Pagamento</h3>
+        <p>Possuímos diversas formas de pagamento, aproveite os descontos.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag("lage.jpg") %>
+      <div class="carousel-caption">
+        <h3>Aprenda a usar nosso Aplicativo</h3>
+        <p>Não sabe como usar nosso aplicativo? Problema resolvido mostramos onde ir para utilizar o Aplicativo Taxi 5 Estrelas.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div>
+
+<!-- Final do Carrossel -->
+
+
+</div>
+<% end %>

@@ -8,9 +8,15 @@ body {
   overflow-x: hidden;
 }
 
+.container_carrossel{
+  background-color: #fff;
+  padding: 50px 0;
+}
+
 .form-box {
 	margin-top: 35px;
 }
+
 
 .form-top {
 	overflow: hidden;
@@ -176,13 +182,23 @@ header .intro-text .skills {
 
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 35%;
-      height: 35%;
+      width: 1900px;
+      height: 400px;
       margin: auto;
   }
+
+.carousel-control.left{
+    background-image: linear-gradient(to right, rgba(25, 25, 112, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+}
+
+.carousel-control.right{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(25, 25, 112, 0.5) 100%);
+
+}
+
 @media (min-width: 768px) {
   header .container {
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 100px;
   }
   header .intro-text .name {
@@ -196,13 +212,17 @@ header .intro-text .skills {
     height: 300px;
   }
   .img-left {
-        float: left;
-        margin-right: 25px;
-    }
+    float: left;
+    margin-right: 25px;
+  }
+  .container_carrossel{
+    background-color: #fff;
+    padding: 50px 0;
+  }
 
 }
 .navbar-custom {
-  background: #2C3E50;
+  background: #191970;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -275,6 +295,10 @@ header .intro-text .skills {
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
   }
+  .container_carrossel{
+    background-color: #fff;
+    padding: 50px 0;
+  }
 }
 section {
   padding: 100px 0;
@@ -293,6 +317,10 @@ section.success {
   }
   section.first {
     padding-top: 75px;
+  }
+  .container_carrossel{
+    background-color: #fff;
+    padding: 50px 0;
   }
 }
 #portfolio .portfolio-item {
@@ -400,14 +428,14 @@ footer h3 {
 }
 footer .footer-above {
   padding-top: 50px;
-  background-color: #2C3E50;
+  background-color: #191970;
 }
 footer .footer-col {
   margin-bottom: 50px;
 }
 footer .footer-below {
   padding: 25px 0;
-  background-color: #233140;
+  background-color: #00008b;
 }
 .btn-outline {
   color: white;
@@ -623,5 +651,6 @@ fieldset[disabled] .btn-success.active {
 @media (max-width: 415px) {
 
 	h1, h2 { font-size: 32px; }
+
 
 }
