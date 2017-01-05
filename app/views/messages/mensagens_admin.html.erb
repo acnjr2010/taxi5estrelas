@@ -13,18 +13,21 @@
                 <div id="morris-area-chart">
                   <table class="table table-striped">
                     <thead>
+                      <th>Data</th>
                       <th>Nome</th>
                       <th>Email</th>
                       <th>Telefone</th>
-                      <th>Data</th>
+                      <th>Mensagem</th>
                     </thead>
                     <tbody>
                       <% @messages.each do |message| %>
                         <tr>
+                          <td><%= time_tag(message.created_at) %></td>
                           <td><%= message.name %></td>
                           <td><%= message.email %></td>
                           <td><%= message.phone %></td>
-                          <td><%= time_tag(message.created_at) %></td>
+                          <td><%= message.message %></td>
+
                         </tr>
                       <% end %>
                     </tbody >
