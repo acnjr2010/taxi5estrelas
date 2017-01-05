@@ -18,6 +18,8 @@ gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'rails-i18n', '~> 5.0.0.beta1'
 gem 'will_paginate', '~> 3.1'
 gem 'ckeditor', '~> 4.2', '>= 4.2.2'
+gem 'validates_email_format_of'
+gem 'jquery_mask_rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
