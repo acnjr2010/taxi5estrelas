@@ -128,7 +128,7 @@ hr.star-primary:after {
   margin: 0 auto;
 }
 header {
-  text-align: center;
+  text-align: justify;
   background: #ffffff;
   color: #656565;
 }
@@ -151,10 +151,14 @@ header .intro-text .name {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2em;
+  text-align: center;
 }
 header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
+  line-height: 1.0;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .app_android{
@@ -205,7 +209,9 @@ header .intro-text .skills {
     font-size: 4.75em;
   }
   header .intro-text .skills {
-    font-size: 1.75em;
+    font-size: 2em;
+    line-height: 2.0;
+    text-align: justify;
   }
   .logo{
     width: 500px;
