@@ -11,14 +11,15 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
+//= require jquery.easing
+//= require scripts
 //= require bootstrap-sprockets
 //= require contact_me
 //= require freelancer
 //= require jqBootstrapValidation
 //= require jquery.backstretch
 //= require placeholder
-//= require scripts
-//= require jquery_ujs
 //= require turbolinks
 //= require ckeditor/init
 //= require_tree .
