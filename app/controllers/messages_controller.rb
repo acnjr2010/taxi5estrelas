@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @contact.save
         MessageMailer.contact_users(@contact).deliver
-        format.html { redirect_to contato_path, notice: "Mensagem enviada com sucesso" }
+        format.html { redirect_to root_path, notice: "Mensagem enviada com sucesso" }
         format.json { render :show, status: :created, location: @contact }
       else
         format.html { render :index }
