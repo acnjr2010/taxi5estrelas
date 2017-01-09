@@ -203,7 +203,7 @@ section .intro-text .skills {
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 100%;
-      height: 100%;
+      height: 200px;
     }
 
 .carousel-control.left{
@@ -281,7 +281,7 @@ section .intro-text .skills {
   .carousel-inner > .item > img,
     .carousel-inner > .item > a > img {
         width: 100%;
-        height: 100%;
+        height: 50%;
       }
 
   .container_carrossel{
