@@ -133,7 +133,7 @@ hr.star-primary:after {
 }
 header {
   text-align: justify;
-  background: url('background.jpeg');
+  background-image: url('background.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   color: #656565;
