@@ -6,27 +6,30 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
       </button>
-      <a class="navbar-brand" href="#page-top">Taxi 5 Estrelas</a>
+      <%= link_to "Taxi 5 Estrelas", root_path, class: "navbar-brand" %>
+
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="hidden">
-          <a href="#page-top"></a>
-        </li>
-        <li class="page-scroll">
-          <a href="#home">Home</a>
-        </li>
-        <li class="page-scroll">
-          <a href="#app">Aplicativo</a>
-        </li>
-        <li class="page-scroll">
-          <a href="#promocao">Promoção</a>
-        </li>
-        <li class="page-scroll">
-          <a href="#contato">Contato</a>
-        </li>
+        <% if current_page?(root_path) %>
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li class="page-scroll">
+            <a href="#home">Home</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#app">Aplicativo</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#promocao">Promoção</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#contato">Contato</a>
+          </li>
+        <% end %>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
