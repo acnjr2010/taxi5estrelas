@@ -139,7 +139,7 @@ header {
   color: #656565;
 }
 header .container {
-  padding-top: 100px;
+  padding-top: 70px;
   padding-bottom: 50px;
 }
 
@@ -229,6 +229,17 @@ section .intro-text .skills {
     height: 200px;
   }
 
+  .abertura{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #FFF;
+    line-height: 65px;
+    z-index: 0;
+    text-transform: uppercase;
+    font-size: 25px;
+    float: none;
+  }
+
 @media (min-width: 768px) {
   header .container {
     padding-top: 80px;
@@ -251,14 +262,7 @@ section .intro-text .skills {
     text-align: justify;
   }
   .abertura{
-    /*text-align: center;
-    color: #fff;
-     font-family: 'Open Sans', sans-serif;
-    */font-family: 'Montserrat', sans-serif;
-    /*font-size: 4.75em;
-    color: #fff;
-    text-transform: uppercase;    */
-    /*font-family: 'Baloo Tamma', cursive;*/
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     color: #FFF;
     line-height: 65px;
