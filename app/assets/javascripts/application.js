@@ -23,3 +23,40 @@
 //= require turbolinks
 //= require ckeditor/init
 //= require_tree .
+
+$(document).ready(function(){
+    // Activate Carousel
+    $("#myCarousel").carousel({interval: 2500, pause: "hover"});
+    // Enable Carousel Controls
+    $(".left").click(function(){
+        $("#myCarousel").carousel("prev");
+    });
+    $(".right").click(function(){
+        $("#myCarousel").carousel("next");
+    });
+
+    $("#myCarousel_app").carousel({interval: 2500, pause: "hover"});
+    // Enable Carousel Controls
+    $(".left").click(function(){
+        $("#myCarousel_app").carousel("prev");
+    });
+    $(".right").click(function(){
+        $("#myCarousel_app").carousel("next");
+    });
+});
+
+
+$(function() {
+  $('a[href*="#"]:not(.carousel-control)').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
