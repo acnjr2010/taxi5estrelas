@@ -4,7 +4,6 @@ class MessageMailer < ApplicationMailer
   def contact_users(contact)
     @contact = contact
 
-    #mail to: "taxicincoestrelas@gmail.com", subject: "Mensagem através da página web"
-    mail to: "nog.junior84@gmail.com", subject: "Mensagem através da página web"
+    mail to: "taxicincoestrelas@gmail.com", subject: "Mensagem através da página web"
   end
 end
