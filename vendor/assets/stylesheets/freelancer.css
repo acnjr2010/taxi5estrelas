@@ -17,7 +17,7 @@ body {
   padding-top: 0;
 }
 
-.form-box {
+.form-box{
 	margin-top: 35px;
 }
 
@@ -382,9 +382,10 @@ section .intro-text .skills {
   }
 }
 section {
-  padding: 100px 0;
+  padding: 20px 0;
 }
 section h2 {
+  padding: 40px 0;
   margin: 0;
   font-size: 3em;
 }
