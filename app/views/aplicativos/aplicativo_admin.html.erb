@@ -12,23 +12,22 @@
             <div class="panel-body">
                 <div id="morris-area-chart">
                   <% if !Aplicativo.count.nil? %>
-                    <% if @app.first_paragraph.present? || @app.second_paragraph.present? || @app.third_paragraph.present? || @app.forth_paragraph.present? %>
-                      <% if @app.first_paragraph.present? %>
-                        <p><b>Primeiro Paragrafo:</b><br> <%= @app.first_paragraph %></p>
-                      <% end %>
-
-                      <% if @app.second_paragraph.present? %>
-                        <p><b>Segundo Paragrafo:</b><br> <%= @app.second_paragraph %></p>
-                      <% end %>
-
-                      <% if @app.third_paragraph.present? %>
-                        <p><b>Terceiro Paragrafo:</b><br> <%= @app.third_paragraph %></p>
-                      <% end %>
-
-                      <% if @app.forth_paragraph.present? %>
-                        <p><b>Quarto Paragrafo:</b><br> <%= @app.forth_paragraph %></p>
-                      <% end %>
+                    <% if !@app.first_paragraph.nil? %>
+                      <p><b>Primeiro Paragrafo:</b><br> <%= @app.first_paragraph %></p>
                     <% end %>
+
+                    <% if !@app.second_paragraph.nil? %>
+                      <p><b>Segundo Paragrafo:</b><br> <%= @app.second_paragraph %></p>
+                    <% end %>
+
+                    <% if !@app.third_paragraph.nil? %>
+                      <p><b>Terceiro Paragrafo:</b><br> <%= @app.third_paragraph %></p>
+                    <% end %>
+
+                    <% if !@app.forth_paragraph.nil? %>
+                      <p><b>Quarto Paragrafo:</b><br> <%= @app.forth_paragraph %></p>
+                    <% end %>
+
                     <%= link_to edit_aplicativo_path(@app), class: 'btn btn-primary pull-right' do %>
                       <%= icon('edit') %> Editar Postagem
                     <% end %>
