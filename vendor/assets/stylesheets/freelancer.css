@@ -17,6 +17,10 @@ body {
   padding-top: 0;
 }
 
+.app_carousel {
+  background-color: #191970;
+}
+
 .form-box{
 	margin-top: 35px;
 }
