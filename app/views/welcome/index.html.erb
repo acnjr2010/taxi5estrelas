@@ -260,29 +260,21 @@
                     <div class="col-sm-8">
                       <div class="header-content">
                         <div class="header-content-inner">
-                          <% if !@app.first_paragraph.nil? %>
                           <p class="text-muted">
-                            <%= @app.first_paragraph %>
+                            <%= @app.first_paragraph if !@app.first_paragraph.nil? %>
                           </p><br>
-                          <% end %>
 
-                          <% if !@app.second_paragraph.nil? %>
                           <p class="text-muted">
-                            <%= @app.second_paragraph %>
+                            <%= @app.second_paragraph if !@app.second_paragraph.nil? %>
                           </p><br>
-                          <% end %>
 
-                          <% if !@app.third_paragraph.nil? %>
                           <p class="text-muted">
-                            <%= @app.third_paragraph %>
+                            <%= @app.third_paragraph if !@app.third_paragraph.nil? %>
                           </p><br>
-                          <% end %>
 
-                          <% if !@app.forth_paragraph.nil? %>
                           <p class="text-muted">
-                            <%= @app.forth_paragraph %>
+                            <%= @app.forth_paragraph if !@app.forth_paragraph.nil? %>
                           </p><br>
-                          <% end %>
                         </div>
                       </div>
                     </div>
@@ -361,7 +353,7 @@
                             <p><%= image_tag("perspectiva.png", class: "img-responsive", size: "450x450") %> </p>
                           </center>
 
-                          <% if !@promocao.nil? %>
+                          <% if @promocao.present? %>
                           <div class="intro-text">
                             <span class="skills"><%= @promocao.texto %></span>
                           </div>
