@@ -2,6 +2,7 @@ class WelcomeController < ApplicationController
   def index
     @contact = Message.new
     @promocao = Promocao.last
+    @app = Aplicativo.last
   end
 
   def create

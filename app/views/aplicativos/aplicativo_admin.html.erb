@@ -11,20 +11,34 @@
             </div>
             <div class="panel-body">
                 <div id="morris-area-chart">
-                  <% if @app.present? %>
-                    <p><b>Data:</b> <%= time_tag(@app.created_at) %></p>
-                    <p><b>Imagem Publicada:</b> <%= @app.avatar_file_name %></p>
-                    <p><b>Texto:</b> <%= @app.app %></p>
+                  <% if @app.first_paragraph.present? || @app.second_paragraph.present? || @app.third_paragraph.present? || @app.forth_paragraph.present? %>
+                    <% if @app.first_paragraph.present? %>
+                      <p><b>Primeiro Paragrafo:</b><br> <%= @app.first_paragraph %></p>
+                    <% end %>
+
+                    <% if @app.second_paragraph.present? %>
+                      <p><b>Segundo Paragrafo:</b><br> <%= @app.second_paragraph %></p>
+                    <% end %>
+
+                    <% if @app.third_paragraph.present? %>
+                      <p><b>Terceiro Paragrafo:</b><br> <%= @app.third_paragraph %></p>
+                    <% end %>
+
+                    <% if @app.forth_paragraph.present? %>
+                      <p><b>Quarto Paragrafo:</b><br> <%= @app.forth_paragraph %></p>
+                    <% end %>
+
                     <%= link_to edit_aplicativo_path(@app), class: 'btn btn-primary pull-right' do %>
                       <%= icon('edit') %> Editar Postagem
                     <% end %>
                   <% else %>
                     Sem postagem registrada
+                    <%= link_to new_aplicativo_path, class: 'btn btn-success pull-right', data: { confirm: "Você está prestes a criar uma publicação para a tela de Aplicativo" } do %>
+                      <%= icon('plus') %> Atualizar Aplicativo
+                    <% end %>
                   <% end %>
 
-                  <%= link_to new_aplicativo_path, class: 'btn btn-success pull-right', data: { confirm: "Modificando a postagem o conteúdo atual da página Aplicativo será alterado" } do %>
-                    <%= icon('plus') %> Atualizar Aplicativo
-                  <% end %>
+
 
                 </div>
             </div>

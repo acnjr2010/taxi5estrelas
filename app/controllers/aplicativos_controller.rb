@@ -43,6 +43,6 @@ class AplicativosController < ApplicationController
   private
 
   def app_params
-    params.require(:aplicativo).permit(:app, :avatar)
+    params.require(:aplicativo).permit(:first_paragraph, :second_paragraph, :third_paragraph, :forth_paragraph)
   end
 end

@@ -1,5 +1,7 @@
 <%= simple_form_for @app do |f| %>
-  <%= f.input :app, label: "Texto Principal", placeholder: "Texto que vem ao lado da imagem", required: true, autofocus: true, input_html: { rows: 7 } %>
-  <%= f.input :avatar, label: "Imagem Lateral", as: :file, class: 'btn-primary', required: true %>
+  <%= f.input :first_paragraph, label: "Primeiro Parágrafo", placeholder: "Primeiro Parágrafo", required: true, autofocus: true, input_html: { rows: 7 } %>
+  <%= f.input :second_paragraph, label: "Segundo Parágrafo", placeholder: "Segundo Parágrafo", required: true, autofocus: true, input_html: { rows: 7 } %>
+  <%= f.input :third_paragraph, label: "Terceiro Parágrafo", placeholder: "Terceiro Parágrafo", required: true, autofocus: true, input_html: { rows: 7 } %>
+  <%= f.input :forth_paragraph, label: "Quarto Parágrafo", placeholder: "Quarto Parágrafo", required: true, autofocus: true, input_html: { rows: 7 } %>
   <%= f.submit 'Salvar', class: 'btn btn-warning'%>
 <% end %>
