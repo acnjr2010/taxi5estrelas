@@ -11,7 +11,7 @@
             </div>
             <div class="panel-body">
                 <div id="morris-area-chart">
-                  <% if !Aplicativo.count.nil? %>
+                  <% if Aplicativo.count != 0 %>
                     <% if !@app.first_paragraph.nil? %>
                       <p><b>Primeiro Paragrafo:</b><br> <%= @app.first_paragraph %></p>
                     <% end %>
@@ -40,7 +40,5 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </div>
