@@ -260,21 +260,31 @@
                     <div class="col-sm-8">
                       <div class="header-content">
                         <div class="header-content-inner">
-                          <p class="text-muted">
-                            <%= @app.first_paragraph if !@app.first_paragraph.nil? %>
-                          </p><br>
+                          <% if !Aplicativo.count.nil? %>
+                            <% if @app.first_paragraph.present? %>
+                            <p class="text-muted">
+                              <%= @app.first_paragraph %>
+                            </p><br>
+                            <% end %>
 
-                          <p class="text-muted">
-                            <%= @app.second_paragraph if !@app.second_paragraph.nil? %>
-                          </p><br>
+                            <% if @app.second_paragraph.present? %>
+                            <p class="text-muted">
+                              <%= @app.second_paragraph %>
+                            </p><br>
+                            <% end %>
 
-                          <p class="text-muted">
-                            <%= @app.third_paragraph if !@app.third_paragraph.nil? %>
-                          </p><br>
+                            <% if @app.third_paragraph.present? %>
+                            <p class="text-muted">
+                              <%= @app.third_paragraph %>
+                            </p><br>
+                            <% end %>
 
-                          <p class="text-muted">
-                            <%= @app.forth_paragraph if !@app.forth_paragraph.nil? %>
-                          </p><br>
+                            <% if @app.forth_paragraph.present? %>
+                            <p class="text-muted">
+                              <%= @app.forth_paragraph %>
+                            </p><br>
+                            <% end %>
+                          <% end %>
                         </div>
                       </div>
                     </div>
