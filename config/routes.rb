@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "my_devise/registrations"}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :welcome
   resources :messages
@@ -18,7 +17,5 @@ Rails.application.routes.draw do
   get "/promocao_admin", controller: 'promocaos', action: 'promocao_admin'
   get "/aplicativo_admin", controller: 'aplicativos', action: 'aplicativo_admin'
   get "/mensagens_admin", controller: 'messages', action: 'mensagens_admin'
-
-
 
 end
