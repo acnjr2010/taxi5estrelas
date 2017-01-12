@@ -6,15 +6,18 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
       </button>
-      <%= link_to "Taxi 5 Estrelas", root_path, class: "navbar-brand" %>
-
+      <% if current_page?(new_user_session_path) %>
+        <%= link_to "Taxi 5 Estrelas", url_for(root_path), class: "page-scroll navbar-brand", :data => { :reload => true } %>
+      <% elsif current_page?(root_path) %>
+        <%= link_to "Taxi 5 Estrelas", "#page-top", class: "page-scroll navbar-brand" %>
+      <% end %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if current_page?(root_path) %>
-          <li class="hidden">
+          <li class="page-scroll">
             <a href="#page-top"></a>
           </li>
           <li class="page-scroll">
