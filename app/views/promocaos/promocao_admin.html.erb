@@ -10,7 +10,7 @@
             </div>
             <div class="panel-body">
                 <div id="morris-area-chart">
-                  <% if @promocao.texto.present? %>
+                  <% if Promocao.count != 0 %>
                     <p><b>Texto:</b> <%= @promocao.texto %></p>
                     <%= link_to edit_promocao_path(@promocao), class: 'btn btn-primary pull-right' do %>
                       <%= icon('edit') %> Editar Postagem
