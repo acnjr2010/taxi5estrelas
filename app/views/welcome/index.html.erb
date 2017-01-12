@@ -341,8 +341,15 @@
                   </tr>
                 </table>
 
-              <p><%= image_tag("perspectiva.png", class: "img-responsive", size: "450x450") %> <p>
+              <p><%= image_tag("perspectiva.png", class: "img-responsive", size: "450x450") %> </p>
               </center>
+
+              <% if @promocao.present? %>
+                <div class="intro-text">
+                  <span class="skills"><%= @promocao.texto %></span>
+                </div>
+                <br><br>
+              <% end %>
 
               <section id="services">
                   <div class="container">

@@ -1,6 +1,4 @@
 <%= simple_form_for @promocao do |f| %>
   <%= f.input :texto, label: "Texto", placeholder: "Texto que vem na parte inferior da imagem",required: true, autofocus: true, input_html: { rows: 7 } %>
-  <%= f.input :avatar, label: "Prospecto", as: :file, class: 'btn-primary', required: true %>
-  <%= f.input :image, label: "Imagem Lateral", as: :file, class: 'btn-primary', required: true %>
   <%= f.submit 'Salvar', class: 'btn btn-warning'%>
 <% end %>
