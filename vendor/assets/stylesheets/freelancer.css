@@ -15,6 +15,20 @@ body {
 .container_carrossel{
   background-color: #fff;
   padding-top: 0;
+  padding-bottom: 0;
+}
+
+.carousel-app-right
+  .carousel-caption {
+    right: 10%;
+    text-align: right;
+    max-width: 600px;
+    left: auto;
+    padding: 10px;
+
+}
+.carousel-indicators{
+  display: none;
 }
 
 .app_carousel {
