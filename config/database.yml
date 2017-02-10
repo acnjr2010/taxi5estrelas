@@ -1,30 +1,10 @@
-default: &default
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  username: root
-  password:
-  socket: /var/run/mysqld/mysqld.sock
-
-development:
-  <<: *default
-  database: cinco_estrelas_development
-
-test:
-  <<: *default
-  database: cinco_estrelas_test
-
-production:
-  <<: *default
-  database: cinco_estrelas_production
-  username: cinco_estrelas
-  password: <%= ENV['CINCO_ESTRELAS_DATABASE_PASSWORD'] %>
-
-
 # default: &default
-#   adapter: postgresql
-#   encoding: unicode
+#   adapter: mysql2
+#   encoding: utf8
 #   pool: 5
+#   username: root
+#   password:
+#   socket: /var/run/mysqld/mysqld.sock
 #
 # development:
 #   <<: *default
@@ -38,4 +18,24 @@ production:
 #   <<: *default
 #   database: cinco_estrelas_production
 #   username: cinco_estrelas
-#   password: <%= ENV['MULTIVAGAS_DATABASE_PASSWORD'] %>
+#   password: <%= ENV['CINCO_ESTRELAS_DATABASE_PASSWORD'] %>
+
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: cinco_estrelas_development
+
+test:
+  <<: *default
+  database: cinco_estrelas_test
+
+production:
+  <<: *default
+  database: cinco_estrelas_production
+  username: cinco_estrelas
+  password: <%= ENV['MULTIVAGAS_DATABASE_PASSWORD'] %>
