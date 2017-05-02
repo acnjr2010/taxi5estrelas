@@ -12,31 +12,34 @@
 
 ActiveRecord::Schema.define(version: 20170112034709) do
 
-  create_table "aplicativos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "first_paragraph",  limit: 65535
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.text     "second_paragraph", limit: 65535
-    t.text     "third_paragraph",  limit: 65535
-    t.text     "forth_paragraph",  limit: 65535
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "aplicativos", force: :cascade do |t|
+    t.text     "first_paragraph"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.text     "second_paragraph"
+    t.text     "third_paragraph"
+    t.text     "forth_paragraph"
   end
 
-  create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "messages", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.string   "phone"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.text     "message",    limit: 65535
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "message"
   end
 
-  create_table "promocaos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "texto",      limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+  create_table "promocaos", force: :cascade do |t|
+    t.text     "texto"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
